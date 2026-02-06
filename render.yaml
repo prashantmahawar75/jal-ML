@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: jalguard-ai
+    runtime: python
+    buildCommand: pip install -r requirements.txt && python ML/train_model.py
+    startCommand: gunicorn backend:app
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11
