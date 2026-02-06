@@ -809,7 +809,7 @@
 
             try {
                 // Use relative path for production
-                const response = await fetch('/predict', {
+                const response = await fetch('https://jal-ml.onrender.com/predict', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
